@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Archiv | Lee Blog</title>
+  <title>非root用户使用Docker | Lee Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lee Blog">
-<meta property="og:url" content="https://imlee.top/archives/index.html">
+  <meta name="description" content="1234567891011[root@localhost ~]# groupadd docker[root@localhost ~]# groupsroot[root@localhost ~]# usermod -a -G docker lee[root@localhost ~]# grep docker &#x2F;etc&#x2F;groupdockerroot:x:994:docker:x:1001:lee[r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非root用户使用Docker">
+<meta property="og:url" content="https://imlee.top/2023/02/12/%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/index.html">
 <meta property="og:site_name" content="Lee Blog">
+<meta property="og:description" content="1234567891011[root@localhost ~]# groupadd docker[root@localhost ~]# groupsroot[root@localhost ~]# usermod -a -G docker lee[root@localhost ~]# grep docker &#x2F;etc&#x2F;groupdockerroot:x:994:docker:x:1001:lee[r">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-02-12T12:46:00.000Z">
+<meta property="article:modified_time" content="2024-03-09T13:57:41.231Z">
 <meta property="article:author" content="Lee">
 <meta name="twitter:card" content="summary">
   
@@ -67,106 +71,62 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/19/%E9%85%8D%E7%BD%AE-SSH-%E5%85%AC%E9%92%A5%E5%92%8C%E7%A7%81%E9%92%A5/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-19T10:49:00.000Z" itemprop="datePublished">Feb 19</time>
+        <section id="main"><article id="post-非root用户使用Docker" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/12/%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/" class="article-date">
+  <time class="dt-published" datetime="2023-02-12T12:46:00.000Z" itemprop="datePublished">2023-02-12</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/19/%E9%85%8D%E7%BD%AE-SSH-%E5%85%AC%E9%92%A5%E5%92%8C%E7%A7%81%E9%92%A5/">配置 SSH 公钥和私钥</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      非root用户使用Docker
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/02/01/Mac-%E9%85%8D%E7%BD%AE-VS-Code-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-02-01T07:11:00.000Z" itemprop="datePublished">Feb 1</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/02/01/Mac-%E9%85%8D%E7%BD%AE-VS-Code-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">Mac 配置 VS Code 环境变量</a>
-    </h1>
-  
+        <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># groupadd docker</span></span><br><span class="line">[root@localhost ~]<span class="comment"># groups</span></span><br><span class="line">root</span><br><span class="line">[root@localhost ~]<span class="comment"># usermod -a -G docker lee</span></span><br><span class="line">[root@localhost ~]<span class="comment"># grep docker /etc/group</span></span><br><span class="line">dockerroot:x:994:</span><br><span class="line">docker:x:1001:lee</span><br><span class="line">[root@localhost ~]<span class="comment"># service docker restart</span></span><br><span class="line">Redirecting to /bin/systemctl restart docker.service</span><br><span class="line">[root@localhost ~]<span class="comment"># su lee</span></span><br><span class="line">[lee@localhost ~]$ docker images</span><br></pre></td></tr></table></figure>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://imlee.top/2023/02/12/%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/" data-id="cltk5nlrq000284inch7f2kr5" data-title="非root用户使用Docker" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
   </div>
-</article>
   
     
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/12/%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-02-12T12:46:00.000Z" itemprop="datePublished">Feb 12</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/12/%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E4%BD%BF%E7%94%A8Docker/">非root用户使用Docker</a>
-    </h1>
+    <a href="/2024/02/01/Mac-%E9%85%8D%E7%BD%AE-VS-Code-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Mac 配置 VS Code 环境变量
+        
+      </div>
+    </a>
   
+  
+    <a href="/2023/02/12/Docker-in-WSL2-failed-to-start-daemon-Error-initializing-network-controller/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Docker in WSL2 failed to start daemon: Error initializing network controller</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/12/Docker-in-WSL2-failed-to-start-daemon-Error-initializing-network-controller/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-02-12T12:45:00.000Z" itemprop="datePublished">Feb 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/12/Docker-in-WSL2-failed-to-start-daemon-Error-initializing-network-controller/">Docker in WSL2 failed to start daemon: Error initializing network controller</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 
 </section>
