@@ -1442,8 +1442,8 @@ canvas:not(#ribbon-canvas),
   --global-font-size: 14px;
   --global-bg: #fff;
   --font-color: #4c4948;
-  --hr-border: #b3e19c;
-  --hr-before-color: #94d574;
+  --hr-border: #a0cfff;
+  --hr-before-color: #79bbff;
   --search-bg: #f6f8fa;
   --search-input-color: #4c4948;
   --search-a-color: #4c4948;
@@ -4006,7 +4006,7 @@ h1.page-title + .tag-cloud-list {
   overflow-wrap: break-word;
 }
 #article-container a {
-  color: #67c23a;
+  color: #409eff;
 }
 #article-container a:hover {
   text-decoration: underline;
